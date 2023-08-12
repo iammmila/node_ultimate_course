@@ -1,5 +1,7 @@
-const path = require("path");
+const os = require("node:os");
 
-const parthObj = path.parse(__filename);
+const totalMemory = os.totalmem();
+const freeMemory = os.freemem();
+console.log("total memory: " + totalMemory);
+console.log("free  memory: " + freeMemory);
 
-console.log(parthObj);
